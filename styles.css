@@ -1,0 +1,131 @@
+/* Halloween Theme: Blood Red & Black */
+:root {
+  --blood: #b22222;
+  --dark-blood: #8b0000;
+  --black: #0a0a0a;
+  --gray: #2a2a2a;
+  --light-gray: #444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: #ccc;
+  font-family: 'Creepster', 'Arial', cursive;
+  min-height: 100vh;
+}
+
+.text-blood { color: var(--blood); }
+.bg-blood { background-color: var(--blood); }
+.btn-blood { background-color: var(--blood); border-color: var(--blood); color: white; }
+.btn-blood:hover { background-color: var(--dark-blood); border-color: var(--dark-blood); }
+
+.card {
+  background: var(--gray);
+  border: 2px solid var(--blood);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(178, 34, 34, 0.5);
+}
+
+.form-control {
+  background: var(--gray);
+  border: 2px solid var(--blood);
+  color: #fff;
+  border-radius: 12px 0 0 12px;
+}
+.form-control::placeholder { color: #aaa; opacity: 0.7; }
+.form-control:focus {
+  background: var(--gray);
+  border-color: var(--blood);
+  box-shadow: 0 0 0 0.25rem rgba(178, 34, 34, 0.5);
+  color: white;
+}
+
+.input-group .btn {
+  border-radius: 0 12px 12px 0;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+#list .list-group-item {
+  background: var(--gray);
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #eee;
+  transition: all 0.3s ease;
+}
+
+#list .list-group-item:hover {
+  background: #333;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.3);
+}
+
+#list .list-group-item:last-child {
+  border-bottom: none;
+}
+
+#list .list-group-item.purchased {
+  text-decoration: line-through;
+  color: #b22222;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.remove {
+  width: 34px;
+  height: 34px;
+  background: var(--blood);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.6);
+}
+
+.remove:hover {
+  background: #fff;
+  color: var(--blood);
+  transform: scale(1.2) rotate(90deg);
+  box-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+#emptyState {
+  font-style: italic;
+  color: #666;
+}
+
+.modal-content {
+  background: var(--gray);
+  border: 2px solid var(--blood);
+  border-radius: 12px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+/* Optional: Add creepy font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+h1, .modal-title, .btn, .remove {
+  font-family: 'Creepster', cursive;
+}
